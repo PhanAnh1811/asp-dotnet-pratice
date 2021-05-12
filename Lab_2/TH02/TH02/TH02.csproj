@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\iphon12-pro-max.jpg" />
+    <None Include="wwwroot\Images\iphone-11-pro-max.jpg" />
+    <None Include="wwwroot\Images\iphoneXR.jpg" />
+    <None Include="wwwroot\Images\iphone_xs_max.jpg" />
+    <None Include="wwwroot\Images\iphone_x_256gb_4.jpg" />
+  </ItemGroup>
+
+</Project>

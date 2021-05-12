@@ -1,0 +1,79 @@
+﻿@model TH05.Models.AdminUser
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+<h2>LOGIN</h2>
+
+@*@using (Html.BeginForm("LoginAccount", "LoginUser"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.NameUser, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.NameUser, new { htmlAttributes = new { style = "field-validation-error" } })
+                    @Html.ValidationMessageFor(model => model.NameUser, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PasswordUser, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PasswordUser, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PasswordUser, "", new { @class = "text-danger" })
+                </div>
+                @if (ViewBag.ErrorInfo == null)
+                {
+                    <p>@ViewBag.ErrorInfo</p>
+                }
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="LOGIN" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+@using (Html.BeginForm("LoginAccount", "LoginUser"))
+{
+    @Html.AntiForgeryToken();
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.NameUser)</td>
+            <td>@Html.TextBoxFor(model => model.NameUser, new { style = "field-validation-error" })/</td>
+            <td>@Html.ValidationMessageFor(model => model.NameUser)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.PasswordUser)</td>
+            <td>@Html.EditorFor(model => model.PasswordUser)</td>
+            <td>@Html.ValidationMessageFor(model => model.PasswordUser)</td>
+            @if (ViewBag.ErrorInfo == null)
+            {
+                <p>@ViewBag.ErrorInfo</p>
+            }
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+    </table>
+}

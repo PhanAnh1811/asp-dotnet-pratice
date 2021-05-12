@@ -1,0 +1,34 @@
+﻿@using TH02.Models
+@{
+    ViewBag.Title = "GetView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <!--ViewData-->
+    @{
+            Employee employee = (Employee)ViewData["Employee"];
+        }
+    <b>Employee Details</b><br />
+    Employee Name: @employee.FirstName @employee.LastName <br />
+    Employee Salary: @employee.Salary.ToString("C")
+    <!--ViewBag-->
+    @*<b>Employee Details</b><br />
+    Employee Name: @ViewBag.FirstName @ViewBag.LastName <br />
+    Employee Salary: @ViewBag.Salary.ToString("C")*@
+</div>
+
+<!--Strongly-Typed View-->
+@*@model TH02.Models.Employee
+    @{
+        ViewBag.Title = "GetView";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <hr />
+    <div>
+        @{
+            Employee employee = (Employee)ViewData["Employee"];
+        }
+        <b>Employee Details</b><br />
+        Employee Name: @Model.FirstName @Model.LastName <br />
+        Employee Salary: @Model.Salary.ToString("C")
+    </div>*@

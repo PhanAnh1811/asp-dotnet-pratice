@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TH02.Models.Product>
+
+@{
+    ViewData["Title"] = "GetProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    img{
+        width:100px; 
+        height:100px;
+    }
+</style>
+<h1>GetView</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                STT
+            </th>
+            <th>
+                Tên sảm phẩm
+            </th>
+            <th>
+                GB
+            </th>
+            <th>
+                Giá
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                <img src="~/@item.Image"/>
+            </td>
+            <td>
+                <button type="button" class="btn btn-info">Edit</button>
+                <button type="button" class="btn btn-warning">Detail</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
