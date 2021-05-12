@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TH05.Models.ViewModel>
+
+@{
+    ViewBag.Title = "GroupByTop5";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GroupByTop5</h2>
+<table class="table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Quantity</th>
+
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => i.IDPro)</td>
+            <td>@Html.DisplayFor(model => i.NamePro)</td>
+            <td><img src="@Url.Content(i.ImgPro)" /></td>
+            <td>@Html.DisplayFor(model => i.pricePro)</td>
+            <td>@Html.DisplayFor(model => i.Sum_Quantity)</td>
+            <td><a href="/ShoppingCart/AddToCart/@i.IDPro" class="btn btn-default">BUY</td>
+
+        </tr>
+    }
+</table>
+

@@ -19,7 +19,8 @@ namespace TH05.Models
         {
             this.OrderProes = new HashSet<OrderPro>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Key]
         public int IDCus { get; set; }
         public string NameCus { get; set; }
         public string PhoneCus { get; set; }

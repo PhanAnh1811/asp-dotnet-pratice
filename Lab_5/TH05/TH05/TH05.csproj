@@ -132,6 +132,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginUserController.cs" />
+    <Compile Include="Controllers\OrderDetailController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,6 +172,7 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>EntitiesDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +248,8 @@
     <Content Include="Views\Categories\CategoryPartial.cshtml" />
     <Content Include="Views\ShoppingCart\BagCart.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut_Success.cshtml" />
+    <Content Include="Views\Product\SearchOption.cshtml" />
+    <Content Include="Views\OrderDetail\GroupByTop5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
