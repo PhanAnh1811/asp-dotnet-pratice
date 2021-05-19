@@ -29,6 +29,7 @@ namespace TH05.Models
         public string DecriptionPro { get; set; }
         public string Category { get; set; }
         public Nullable<decimal> Price { get; set; }
+        public Nullable<int> Quantity { get; set; }
         
     
         public virtual Category Category1 { get; set; }

@@ -80,3 +80,4 @@ D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.dll
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.SqlServer.dll
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.xml
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.SqlServer.xml
+D:\asp-dotnet-practice\Lab_5\TH05\TH05\obj\Debug\TH05.csprojAssemblyReference.cache

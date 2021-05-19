@@ -90,8 +90,13 @@ namespace TH05.Controllers
                     _order_detail.UnitPrice = (double)item._product.Price;
                     _order_detail.Quantity = item._quantity;
                     database.OrderDetails.Add(_order_detail);
+                    //xử lý cập nhật lại số lượng tồn trong bảng Product
+                    foreach (var p in database.Products.Where(s => s.ProductID == _order_detail.IDProduct))
+                    {
+                        var update_quan_pro = p.Quantity - item._quantity;//số lượng tồn mới=số lượng tồn - số lượng đã mua
+                        p.Quantity = update_quan_pro;//thực hiện cập nhật lại số lượng tồn cho cột Quantity của bảng Product
+                    }
                 }
-
                 database.SaveChanges();
                 cart.ClearCart();
                 return RedirectToAction("CheckOut_Success", "ShoppingCart");

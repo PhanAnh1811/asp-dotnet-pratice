@@ -53,7 +53,12 @@ namespace TH05.Models
         {
             var item = listItems.Find(s => s._product.ProductID == id);
             if (item != null)
-                item._quantity = _new_quantity;
+            {
+                if (listItems.Find(s => s._product.Quantity > _new_quantity) != null) //nếu số lượng mua nhỏ hơn số lượng tồn
+                    item._quantity = _new_quantity; //thì chấp nhận số lượng mua
+                else item._quantity = 1; //ngược lại, thì số lượng mua trả về 1
+            }
+                
         }
 
         public void Remove_CartItem(int id)
