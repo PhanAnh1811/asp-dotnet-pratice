@@ -82,7 +82,7 @@ namespace TH05.Controllers
                 _order.AddressDeliverry = form["AddressDelivery"];
                 _order.IDCus = int.Parse(form["CodeCustomer"]);
                 database.OrderProes.Add(_order);
-                foreach (var item in cart.Listtems)
+                foreach (var item in cart.ListItems)
                 {
                     OrderDetail _order_detail = new OrderDetail();
                     _order_detail.IDOrder = _order.ID;

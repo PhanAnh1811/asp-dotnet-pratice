@@ -19,7 +19,7 @@ namespace TH05.Models
         public string idTemp { get; set; }
 
         List<CartItem> listItems = new List<CartItem>();
-        public IEnumerable<CartItem> Listtems
+        public IEnumerable<CartItem> ListItems
         {
             get { return listItems; }
         }
