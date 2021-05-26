@@ -81,3 +81,7 @@ D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.SqlServer.dll
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.xml
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\EntityFramework.SqlServer.xml
 D:\asp-dotnet-practice\Lab_5\TH05\TH05\obj\Debug\TH05.csprojAssemblyReference.cache
+D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\PagedList.dll
+D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\PagedList.Mvc.dll
+D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\PagedList.xml
+D:\asp-dotnet-practice\Lab_5\TH05\TH05\bin\PagedList.Mvc.xml
